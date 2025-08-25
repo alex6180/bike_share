@@ -83,19 +83,6 @@ def main() -> None:
             "hour_corr_heatmap": "figures/hour_corr_heatmap.png",
         },
     )
-    report.generate_docx_report(
-        output_dir=output_root,
-        day_profile=day_profile,
-        hour_profile=hour_profile,
-        top_day_corr=day_corr.sort_values("pearson_abs", ascending=False).head(8),
-        top_hour_corr=hour_corr.sort_values("pearson_abs", ascending=False).head(8),
-        figures={
-            "day_cnt_dist": "figures/day_cnt_dist.png",
-            "hour_cnt_dist": "figures/hour_cnt_dist.png",
-            "day_corr_heatmap": "figures/day_corr_heatmap.png",
-            "hour_corr_heatmap": "figures/hour_corr_heatmap.png",
-        },
-    )
 
 
 if __name__ == "__main__":
